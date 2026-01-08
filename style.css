@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  color: #222;
+  line-height: 1.6;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: #111;
+  color: #fff;
+}
+
+.navbar nav a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* HERO */
+.hero {
+  height: 90vh;
+  background: linear-gradient(to right, #000000cc, #000000cc),
+              url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  max-width: 800px;
+}
+
+.hero p {
+  margin: 15px 0 30px;
+  max-width: 700px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  background: #ff6b00;
+  color: #fff;
+  padding: 12px 22px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btn.outline {
+  background: transparent;
+  border: 2px solid #fff;
+}
+
+/* =======================
+   SECTIONS
+======================= */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+  background: #f4f6f8; /* soft light gray for main sections */
+}
+
+.section.light {
+  background: #e8edf2; /* slightly darker for alternate sections */
+}
+
+.section h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+.section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #ff6b00;
+  margin: 12px auto 0;
+}
+
+.section p {
+  max-width: 700px;
+  margin: 15px auto 0;
+  color: #444;
+  font-size: 16px;
+}
+
+/* =======================
+   CARDS (SERVICES / TESTIMONIALS)
+======================= */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: 40px auto 0;
+}
+
+.card {
+  background: #fdfdfd; /* soft off-white */
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.card p {
+  font-size: 14.5px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* =======================
+   WHY CHOOSE US
+======================= */
+.why-list {
+  list-style: none;
+  max-width: 700px;
+  margin: 40px auto 0;
+  padding: 0;
+  text-align: left;
+}
+
+.why-list li {
+  background: #f7f9fb; /* soft gray for contrast */
+  margin: 12px 0;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+  font-size: 15px;
+  color: #333;
+}
+
+/* =======================
+   PROCESS
+======================= */
+.process {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: 40px auto 0;
+}
+
+.process div {
+  background: #ff6b00; /* brand color for process steps */
+  color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* =======================
+   FORM
+======================= */
+form {
+  max-width: 420px;
+  margin: 40px auto 0;
+  background: #f4f6f8; /* soft gray instead of pure white */
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 14px 15px;
+  margin: 12px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  background: #fff; /* inputs still white for clarity */
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #ff6b00;
+}
+
+.contact-note {
+  margin-top: 18px;
+  color: #555;
+  font-size: 14px;
+}
+
+/* =======================
+   FOOTER
+======================= */
+footer {
+  background: #111;
+  color: #bbb;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 16px;
+  }
+
+  .section h2 {
+    font-size: 26px;
+  }
+}

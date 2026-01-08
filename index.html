@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Marklance | Helping Small Businesses Grow Online</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<script>
+function sendToWhatsApp(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const phone = document.getElementById("phone").value;
+  const message = document.getElementById("message").value;
+
+  const whatsappNumber = "918758553414"; // 🔴 Replace with your number
+
+  const whatsappMessage =
+    `Hello Marklance,%0A%0A` +
+    `Name: ${name}%0A` +
+    `Phone: ${phone}%0A` +
+    `Message: ${message}`;
+
+  const whatsappURL =
+    `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+
+  window.open(whatsappURL, "_blank");
+}
+</script>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <h2 class="logo">Marklance</h2>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#why">Why Us</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Helping small businesses grow online</h1>
+  <p>Instagram Design • Websites • Google Presence • Custom Web Solutions</p>
+  <div class="hero-buttons">
+    <a href="https://wa.me/918758553414" class="btn">WhatsApp Us</a>
+    <a href="#contact" class="btn outline">Get Free Consultation</a>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section">
+  <h2>Our Services</h2>
+  <div class="cards">
+
+    <div class="card">
+      <h3>Instagram Post Design</h3>
+      <p>Professional posts & reels that improve brand image and engagement.</p>
+    </div>
+
+    <div class="card">
+      <h3>1-Page Business Website</h3>
+      <p>Mobile-friendly websites with Call & WhatsApp buttons to get more leads.</p>
+    </div>
+
+    <div class="card">
+      <h3>Google Business Setup</h3>
+      <p>Get discovered on Google Maps and increase local customer reach.</p>
+    </div>
+
+    <div class="card">
+      <h3>Full-Stack Website</h3>
+      <p>Custom websites with admin panel, database, and scalable features.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why" class="section light">
+  <h2>Why Choose Marklance?</h2>
+  <ul class="why-list">
+    <li>✔ Designed for small businesses</li>
+    <li>✔ Affordable & transparent pricing</li>
+    <li>✔ Fast delivery</li>
+    <li>✔ WhatsApp support</li>
+    <li>✔ Growth-focused solutions</li>
+  </ul>
+</section>
+
+<!-- PROCESS -->
+<section class="section">
+  <h2>How It Works</h2>
+  <div class="process">
+    <div>1️⃣ Message us on WhatsApp</div>
+    <div>2️⃣ Share your requirement</div>
+    <div>3️⃣ We design & deliver</div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section light">
+  <h2>Contact Us</h2>
+
+  <form onsubmit="sendToWhatsApp(event)">
+  <input type="text" id="name" placeholder="Your Name" required>
+  <input type="tel" id="phone" placeholder="Phone Number" required>
+  <textarea id="message" placeholder="Tell us about your project"></textarea>
+  <button type="submit" class="btn">Send on WhatsApp</button>
+</form>
+
+
+  <p class="contact-note">Or message us directly on WhatsApp for quick response.</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2023 Marklance. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
